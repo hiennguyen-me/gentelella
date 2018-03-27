@@ -1,3 +1,5 @@
+/******** Dashboard **********/
+
 .menu {
   margin: 10px auto;
   width: 70%;
@@ -7,4 +9,32 @@
 .button-menu{
   width: 100%;
   height: 100%;
+}
+
+/********** Employee detail *************/
+.action-employee {
+  margin-bottom: 10px;
+}
+
+.info div{
+  margin-bottom: 10px;
+}
+
+.info #employeeID{
+  color: red;
+}
+
+#header-jurisdiction{
+  margin-top:20px;
+  margin-bottom: 10px;
+  weight: Bold;
+  padding: 10px;
+}
+
+.jurisdiction input {
+  margin-left: 40px;
+}
+
+.jurisdiction {
+  margin-bottom: 20px;
 }
