@@ -11,6 +11,10 @@
   height: 100%;
 }
 
+button {
+  text-transform: uppercase;
+}
+
 /********** Employee detail *************/
 .action-employee {
   margin-bottom: 10px;
@@ -37,4 +41,21 @@
 
 .jurisdiction {
   margin-bottom: 20px;
+}
+
+/******* Seller list ********/
+#search-seller div.row{
+  margin-bottom: 10px;
+}
+
+#search-seller select {
+  width: 100%;
+  height: 34px;
+}
+
+/********* Seller detail **************/
+h3 span {
+  color: blue;
+  text-decoration: underline;
+  weight: bold;
 }

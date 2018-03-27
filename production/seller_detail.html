@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Thêm nhân viên</title>
+    <title>Chi tiết seller</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -224,7 +224,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>TẠO MỚI NHÂN VIÊN</h3>
+                <h3>CHI TIẾT NGƯỜI BÁN HÀNG <span>#SL01</span></h3>
               </div>
             </div>
             <div class="clearfix"></div>
@@ -235,124 +235,84 @@
 
                   <div class="row info">
                     <div class = "col-md-6 col-sm-6 col-xs-12">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12">Mã nhân viên</label>
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12">Mã seller</label>
                       <div class="col-md-9 col-sm-9 col-xs-12">
-                        <input type="text" id="employeeID" class="form-control" readonly="readonly" value="GD01">
+                        <input type="text" id="sellerID" class="form-control" readonly="readonly" value="SL01">
                       </div>
                     </div>
                     <div class = "col-md-6 col-sm-6 col-xs-12">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Tên nhân viên</label>
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Tên seller/FB/G+</label>
                       <div class="col-md-9 col-sm-9 col-xs-12">
-                        <input type="text" id="employeeName" class="form-control" value="">
+                        <input type="text" id="sellerName" class="form-control" value="Nguyễn Văn A">
                       </div>
                     </div>
                   </div>
 
                   <div class="row info">
                     <div class = "col-md-6 col-sm-6 col-xs-12">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12">Password</label>
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12">Tên seller trên app</label>
                       <div class="col-md-9 col-sm-9 col-xs-12">
-                        <input type="text" id="employeePassword" class="form-control" readonly="readonly" value="********">
+                        <input type="text" id="sellerAppName" class="form-control" value="Nguyễn Văn A">
                       </div>
                     </div>
                     <div class = "col-md-6 col-sm-6 col-xs-12">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12">Active</label>
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12">Số điện thoại</label>
                       <div class="col-md-9 col-sm-9 col-xs-12">
-                        <input type="checkbox" name="active" value="active" checked>
+                        <input type="text" id="sellerPhone" class="form-control" value="0123456789">
                       </div>
                     </div>
                   </div>
-                  <div class="jurisdiction">
-                    <h5 id="header-jurisdiction">QUYỀN HẠN</h5>
-                    <div class="row">
-                      <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <div class="col-md-3 col-sm-3 col-xs-3">
-                          <input type="checkbox" name="manage-seller" checked>
-                        </div>
-                        <label class="control-label col-md-9 col-sm-9 col-xs-9">Quản lý chung Seller</label>
-                      </div>
-                      <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <div class="col-md-3 col-sm-3 col-xs-3">
-                          <input type="checkbox" name="manage-interaction" checked>
-                        </div>
-                        <label class="control-label col-md-9 col-sm-9 col-xs-9">Quản lý Tương tác</label>
+                  <div class="row info">
+                    <div class = "col-md-6 col-sm-6 col-xs-12">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12">Email</label>
+                      <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input type="text" id="sellerEmail" class="form-control" value="nguyena@gmail.com">
                       </div>
                     </div>
-                    <div class="row">
-                      <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <div class="col-md-3 col-sm-3 col-xs-3">
-                          <input type="checkbox" name="manage-buyer" checked>
-                        </div>
-                        <label class="control-label col-md-9 col-sm-9 col-xs-9">Quản lý chung Buyer</label>
-                      </div>
-                      <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <div class="col-md-3 col-sm-3 col-xs-3">
-                          <input type="checkbox" name="manage-payment" checked>
-                        </div>
-                        <label class="control-label col-md-9 col-sm-9 col-xs-9">Quản lý Thanh toán</label>
+                    <div class = "col-md-6 col-sm-6 col-xs-12">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12">Ngày đăng ký</label>
+                      <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input type="text" id="sellerRegisterDate" class="form-control"  value="20/10/2017">
                       </div>
                     </div>
-                    <div class="row">
-                      <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <div class="col-md-3 col-sm-3 col-xs-3">
-                          <input type="checkbox" name="manage-report" checked>
-                        </div>
-                        <label class="control-label col-md-9 col-sm-9 col-xs-9">Quản lý Báo cáo xấu</label>
-                      </div>
-                      <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <div class="col-md-3 col-sm-3 col-xs-3">
-                          <input type="checkbox" name="manage-notification"checked>
-                        </div>
-                        <label class="control-label col-md-9 col-sm-9 col-xs-9">Quản lý Thông báo chung</label>
+                  </div>
+                  <div class="row info">
+                    <div class = "col-md-6 col-sm-6 col-xs-12">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12">Loại tài khoản</label>
+                      <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input type="text" id="typeAccount" class="form-control" value="Không ưu tiên">
                       </div>
                     </div>
-                    <div class="row">
-                      <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <div class="col-md-3 col-sm-3 col-xs-3">
-                          <input type="checkbox" name="manage-product" checked>
-                        </div>
-                        <label class="control-label col-md-9 col-sm-9 col-xs-9">Quản lý sản phẩm</label>
-                      </div>
-                      <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <div class="col-md-3 col-sm-3 col-xs-3">
-                          <input type="checkbox" name="manage-help" checked>
-                        </div>
-                        <label class="control-label col-md-9 col-sm-9 col-xs-9">Quản lý Thông báo trợ giúp Seller chào hàng</label>
+                    <div class = "col-md-6 col-sm-6 col-xs-12">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12">Trạng thái</label>
+                      <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input type="text" id="sellerStatus" class="form-control"  value="Đề nghị block">
                       </div>
                     </div>
-                    <div class="row">
-                      <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <div class="col-md-3 col-sm-3 col-xs-3">
-                          <input type="checkbox" name="manage-transaction" checked>
-                        </div>
-                        <label class="control-label col-md-9 col-sm-9 col-xs-9">Quản lý Giao dịch</label>
-                      </div>
-                      <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <div class="col-md-3 col-sm-3 col-xs-3">
-                          <input type="checkbox" name="manage-product-group" value="active" checked>
-                        </div>
-                        <label class="control-label col-md-9 col-sm-9 col-xs-9">Quản lý Nhóm sản phẩm</label>
+                  </div>
+                  <div class="row info">
+                    <div class = "col-md-6 col-sm-6 col-xs-12">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12">Lý do</label>
+                      <div class="col-md-9 col-sm-9 col-xs-12">
+                        <textarea rows="3" id="reason" class="form-control">Đây là tài khoản phá hoại app, thường đăng sản phẩm ảo
+                        </textarea>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <div class="col-md-3 col-sm-3 col-xs-3">
-                          <input type="checkbox" name="manage-evaluation" checked>
-                        </div>
-                        <label class="control-label col-md-9 col-sm-9 col-xs-9">Quản lý Đánh giá</label>
-                      </div>
-                      <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <div class="col-md-3 col-sm-3 col-xs-3">
-                          <input type="checkbox" name="manage-config" value="active" checked>
-                        </div>
-                        <label class="control-label col-md-9 col-sm-9 col-xs-9">Quản lý Cấu hình hệ thống</label>
+                    <div class = "col-md-6 col-sm-6 col-xs-12">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12">Người đề nghị block</label>
+                      <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input type="text" id="offererBlock" class="form-control"  value="Admin 1">
                       </div>
                     </div>
                   </div>
 
-                  <div class="action-new-employee pull-right">
-                    <button class="btn btn-primary">Hủy</button>
-                    <button class="btn btn-success">Tạo mới </button>
+
+                  <div class="action-employee pull-right">
+                    <button class="btn btn-primary">QUAY LẠI</button>
+                    <button class="btn btn-primary">UNVIP</button>
+                    <button class="btn btn-success">BLOCK </button>
+                    <button class="btn btn-danger">XÓA</button>
+
                   </div>
 
                 </div>
