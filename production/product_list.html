@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Danh sách nhân viên</title>
+    <title>Danh sách sản phẩm</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -225,7 +225,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>DANH SÁCH NGƯỜI BÁN HÀNG</h3>
+                <h3>DANH SÁCH SẢN PHẨM</h3>
               </div>
             </div>
             <div class="clearfix"></div>
@@ -236,35 +236,22 @@
                   <form id="search-seller" class="form-horizontal form-label-left input_mask">
                     <div class="row">
                       <div class = "col-md-6 col-sm-6 col-xs-12">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Mã sản phẩm</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" id="productID" class="form-control">
+                        </div>
+                      </div>
+                      <div class = "col-md-6 col-sm-6 col-xs-12">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Mã seller</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
                           <input type="text" id="sellerID" class="form-control">
                         </div>
                       </div>
-                      <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Tên seller</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input type="text" id="sellerName" class="form-control">
-                        </div>
-                      </div>
                     </div>
+
                     <div class="row">
                       <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Số điện thoại</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input type="text" id="sellerPhone" class="form-control">
-                        </div>
-                      </div>
-                      <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Email</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input type="text" id="sellerEmail" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Đăng ký từ ngày</label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Từ ngày</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
                           <input type="date" id="startDate" class="form-control">
                         </div>
@@ -276,29 +263,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Loại tài khoản</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                            <select>
-                              <option value="all">Tất cả</option>
-                              <option value="prior">Ưu tiên</option>
-                              <option value="noprior">Không ưu tiên</option>
-                            </select>
-                        </div>
-                      </div>
-                      <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Block</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select>
-                            <option value="all">Tất cả</option>
-                            <option value="blocked">Blocked</option>
-                            <option value="active">Đang hoạt động</option>
-                            <option value="offer-block">Đề nghị block</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
+
                     <button id="search-seller-button" class="btn btn-primary pull-right">Tìm kiếm</button>
                   </form>
 
@@ -307,76 +272,84 @@
                       <thead>
                         <tr>
                           <th>STT</th>
-                          <th>Mã seller</a></th>
-                          <th>Số điện thoại</th>
-                          <th>Loại tài khoản</th>
-                          <th>Block</th>
-                          <th>Ngày tạo</th>
+                          <th>Thời gian tạo</th>
+                          <th>Mã sản phẩm</th>
+                          <th>Mã seller</th>
+                          <th>Tên hiển thị sản phẩm</th>
+                          <th>Tên sản phẩm</th>
+                          <th>Số lần seller vi phạm</th>
                           <th>Thao tác</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td>1</td>
-                          <td><a href="seller_detail.html">SL01</td>
-                          <td>Nguyễn Văn A</td>
-                          <td>Không ưu tiên</td>
-                          <td>Đề nghị block</td>
-                          <td>20/10/2017</td>
+                          <td>12/12/2017</td>
+                          <td><a href="product_detail.html">SP01</td>
+                          <td>SL01</td>
+                          <td>Laptop giá rẻ chính hãng</td>
+                          <td>Laptop vào 123</td>
+                          <td>3</td>
                           <td><i class="fa fa-cog"></i></td>
                         </tr>
                         <tr>
                           <td>2</td>
-                          <td><a href="seller_detail.html">SL02</td>
-                          <td>Nguyễn Văn A</td>
-                          <td>Không ưu tiên</td>
-                          <td>Blocked</td>
-                          <td>20/10/2017</td>
+                          <td>12/12/2017</td>
+                          <td><a href="product_detail.html">SP02</td>
+                          <td>SL01</td>
+                          <td>Laptop giá rẻ chính hãng</td>
+                          <td>Laptop vào 123</td>
+                          <td>3</td>
                           <td><i class="fa fa-cog"></i></td>
                         </tr>
                         <tr>
                           <td>3</td>
-                          <td><a href="seller_detail.html">SL03</td>
-                          <td>Nguyễn Văn A</td>
-                          <td>Ưu tiên</td>
-                          <td>Đề nghị block</td>
-                          <td>20/10/2017</td>
+                          <td>12/12/2017</td>
+                          <td><a href="product_detail.html">SP03</td>
+                          <td>SL01</td>
+                          <td>Laptop giá rẻ chính hãng</td>
+                          <td>Laptop vào 123</td>
+                          <td>3</td>
                           <td><i class="fa fa-cog"></i></td>
                         </tr>
                         <tr>
                           <td>4</td>
-                          <td><a href="seller_detail.html">SL04</td>
-                          <td>Nguyễn Văn A</td>
-                          <td>Ưu tiên</td>
-                          <td>Đang hoạt động</td>
-                          <td>20/10/2017</td>
+                          <td>12/12/2017</td>
+                          <td><a href="product_detail.html">SP04</td>
+                          <td>SL01</td>
+                          <td>Laptop giá rẻ chính hãng</td>
+                          <td>Laptop vào 123</td>
+                          <td>3</td>
                           <td><i class="fa fa-cog"></i></td>
                         </tr>
                         <tr>
                           <td>5</td>
-                          <td><a href="seller_detail.html">SL05</td>
-                          <td>Nguyễn Văn A</td>
-                          <td>Ưu tiên</td>
-                          <td>Đang hoạt động</td>
-                          <td>20/10/2017</td>
+                          <td>12/12/2017</td>
+                          <td><a href="product_detail.html">SP05</td>
+                          <td>SL01</td>
+                          <td>Laptop giá rẻ chính hãng</td>
+                          <td>Laptop vào 123</td>
+                          <td>3</td>
                           <td><i class="fa fa-cog"></i></td>
                         </tr>
                         <tr>
                           <td>6</td>
-                          <td><a href="seller_detail.html">SL06</td>
-                          <td>Nguyễn Văn A</td>
-                          <td>Ưu tiên</td>
-                          <td>Đang hoạt động</td>
-                          <td>20/10/2017</td>
+                          <td>12/12/2017</td>
+                          <td><a href="product_detail.html">SP06</td>
+                          <td>SL01</td>
+                          <td>Laptop giá rẻ chính hãng</td>
+                          <td>Laptop vào 123</td>
+                          <td>3</td>
                           <td><i class="fa fa-cog"></i></td>
                         </tr>
                         <tr>
                           <td>7</td>
-                          <td><a href="seller_detail.html">SL07</td>
-                          <td>Nguyễn Văn A</td>
-                          <td>Ưu tiên</td>
-                          <td>Đang hoạt động</td>
-                          <td>20/10/2017</td>
+                          <td>12/12/2017</td>
+                          <td><a href="product_detail.html">SP07</td>
+                          <td>SL01</td>
+                          <td>Laptop giá rẻ chính hãng</td>
+                          <td>Laptop vào 123</td>
+                          <td>3</td>
                           <td><i class="fa fa-cog"></i></td>
                         </tr>
 

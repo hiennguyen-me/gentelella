@@ -59,3 +59,18 @@ h3 span {
   text-decoration: underline;
   weight: bold;
 }
+
+/********* Product detail ***********/
+.detail-info, .image-info {
+  padding: 20px;
+}
+.detail-info h4, .image-info h4 {
+  font-weight: bold;
+}
+
+.image-info img {
+  width: 70%;
+  height: 70%;
+  padding: 1px;
+  border: 1px solid #EDEDED !important;
+}
