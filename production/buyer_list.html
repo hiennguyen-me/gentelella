@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Danh sách nhân viên</title>
+    <title>Danh sách người mua hàng</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -225,7 +225,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>DANH SÁCH NGƯỜI BÁN HÀNG</h3>
+                <h3>DANH SÁCH NGƯỜI MUA HÀNG</h3>
               </div>
             </div>
             <div class="clearfix"></div>
@@ -236,15 +236,15 @@
                   <form id="search-seller" class="form-horizontal form-label-left input_mask">
                     <div class="row">
                       <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Mã seller</label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Mã buyer</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input type="text" id="sellerID" class="form-control">
+                          <input type="text" id="buyerID" class="form-control">
                         </div>
                       </div>
                       <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Tên seller</label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Tên buyer (FB/G+)</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input type="text" id="sellerName" class="form-control">
+                          <input type="text" id="buyerName" class="form-control">
                         </div>
                       </div>
                     </div>
@@ -252,13 +252,18 @@
                       <div class = "col-md-6 col-sm-6 col-xs-12">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Số điện thoại</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input type="text" id="sellerPhone" class="form-control">
+                          <input type="text" id="buyerPhone" class="form-control">
                         </div>
                       </div>
                       <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Email</label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Block</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input type="text" id="sellerEmail" class="form-control">
+                          <select>
+                            <option value="all">Tất cả</option>
+                            <option value="blocked">Blocked</option>
+                            <option value="active">Đang hoạt động</option>
+                            <option value="offer-block">Đề nghị block</option>
+                          </select>
                         </div>
                       </div>
                     </div>
@@ -276,30 +281,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Loại tài khoản</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                            <select>
-                              <option value="all">Tất cả</option>
-                              <option value="prior">Ưu tiên</option>
-                              <option value="noprior">Không ưu tiên</option>
-                            </select>
-                        </div>
-                      </div>
-                      <div class = "col-md-6 col-sm-6 col-xs-12">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Block</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select>
-                            <option value="all">Tất cả</option>
-                            <option value="blocked">Blocked</option>
-                            <option value="active">Đang hoạt động</option>
-                            <option value="offer-block">Đề nghị block</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <button id="search-seller-button" class="btn btn-primary pull-right">Tìm kiếm</button>
+
+                    <button id="search-buyer-button" class="btn btn-primary pull-right">Tìm kiếm</button>
                   </form>
 
                   <div class="x_content">
@@ -309,74 +292,65 @@
                           <th>STT</th>
                           <th>Mã seller</a></th>
                           <th>Số điện thoại</th>
-                          <th>Loại tài khoản</th>
-                          <th>Block</th>
-                          <th>Ngày tạo</th>
+                          <th>Địa chỉ cơ quan</th>
+                          <th>Địa chỉ nhà</th>
+                          <th>Tình trạng</th>
                           <th>Thao tác</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td>1</td>
-                          <td><a href="seller_detail.html">SL01</td>
-                          <td>Nguyễn Văn A</td>
-                          <td>Không ưu tiên</td>
-                          <td>Đề nghị block</td>
-                          <td>20/10/2017</td>
+                          <td><a href="buyer_detail.html">BY01</td>
+                          <td>0123456789</td>
+                          <td>123 Cộng Hòa, Tân Bình, TPHCM</td>
+                          <td>123 Cộng Hòa, Tân Bình, TPHCM</td>
+                          <td>Blocked</td>
                           <td><i class="fa fa-cog"></i></td>
                         </tr>
                         <tr>
                           <td>2</td>
-                          <td><a href="seller_detail.html">SL02</td>
-                          <td>Nguyễn Văn A</td>
-                          <td>Không ưu tiên</td>
+                          <td><a href="buyer_detail.html">BY02</td>
+                          <td>0123456789</td>
+                          <td>123 Cộng Hòa, Tân Bình, TPHCM</td>
+                          <td>123 Cộng Hòa, Tân Bình, TPHCM</td>
                           <td>Blocked</td>
-                          <td>20/10/2017</td>
                           <td><i class="fa fa-cog"></i></td>
                         </tr>
                         <tr>
                           <td>3</td>
-                          <td><a href="seller_detail.html">SL03</td>
-                          <td>Nguyễn Văn A</td>
-                          <td>Ưu tiên</td>
+                          <td><a href="buyer_detail.html">BY03</td>
+                          <td>0123456789</td>
+                          <td>123 Cộng Hòa, Tân Bình, TPHCM</td>
+                          <td>123 Cộng Hòa, Tân Bình, TPHCM</td>
                           <td>Đề nghị block</td>
-                          <td>20/10/2017</td>
                           <td><i class="fa fa-cog"></i></td>
                         </tr>
                         <tr>
                           <td>4</td>
-                          <td><a href="seller_detail.html">SL04</td>
-                          <td>Nguyễn Văn A</td>
-                          <td>Ưu tiên</td>
-                          <td>Đang hoạt động</td>
-                          <td>20/10/2017</td>
+                          <td><a href="buyer_detail.html">BY04</td>
+                          <td>0123456789</td>
+                          <td>123 Cộng Hòa, Tân Bình, TPHCM</td>
+                          <td>123 Cộng Hòa, Tân Bình, TPHCM</td>
+                          <td>Hoạt động</td>
                           <td><i class="fa fa-cog"></i></td>
                         </tr>
                         <tr>
                           <td>5</td>
-                          <td><a href="seller_detail.html">SL05</td>
-                          <td>Nguyễn Văn A</td>
-                          <td>Ưu tiên</td>
-                          <td>Đang hoạt động</td>
-                          <td>20/10/2017</td>
+                          <td><a href="buyer_detail.html">BY05</td>
+                          <td>0123456789</td>
+                          <td>123 Cộng Hòa, Tân Bình, TPHCM</td>
+                          <td>123 Cộng Hòa, Tân Bình, TPHCM</td>
+                          <td>Hoạt động</td>
                           <td><i class="fa fa-cog"></i></td>
                         </tr>
                         <tr>
                           <td>6</td>
-                          <td><a href="seller_detail.html">SL06</td>
-                          <td>Nguyễn Văn A</td>
-                          <td>Ưu tiên</td>
-                          <td>Đang hoạt động</td>
-                          <td>20/10/2017</td>
-                          <td><i class="fa fa-cog"></i></td>
-                        </tr>
-                        <tr>
-                          <td>7</td>
-                          <td><a href="seller_detail.html">SL07</td>
-                          <td>Nguyễn Văn A</td>
-                          <td>Ưu tiên</td>
-                          <td>Đang hoạt động</td>
-                          <td>20/10/2017</td>
+                          <td><a href="buyer_detail.html">BY06</td>
+                          <td>0123456789</td>
+                          <td>123 Cộng Hòa, Tân Bình, TPHCM</td>
+                          <td>123 Cộng Hòa, Tân Bình, TPHCM</td>
+                          <td>Blocked</td>
                           <td><i class="fa fa-cog"></i></td>
                         </tr>
 
